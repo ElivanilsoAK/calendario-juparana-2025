@@ -1,0 +1,238 @@
+/* Reset global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Magistral-Bold', sans-serif;
+  background-color: #1b2e1f;
+  color: #ffffff;
+  background-image: url('./src/assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Centralização do root */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  padding-bottom: 50px; /* Evita que o footer sobreponha conteúdo */
+}
+
+/* Cabeçalho principal */
+.header {
+  background: linear-gradient(90deg, #ffffffcc, #f5f5f5cc);
+  color: #1b2e1f;
+  padding: 1.2rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  font-size: 1em;
+  font-weight: bold;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  animation: slideDown 1.2s ease-out;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Logo animada */
+.logo {
+  display: inline-block;
+  font-size: 3rem;
+  color: #FFD700;
+  font-weight: bold;
+  animation: bounceLogo 2s ease infinite;
+}
+
+@keyframes bounceLogo {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Container principal */
+.criar-container {
+  background-color: rgba(0, 29, 10, 0.9);
+  padding: 2rem;
+  border-radius: 1rem;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1.5s ease;
+}
+
+/* Containers de conteúdo */
+.form-container, .resumo-container {
+  background-color: #006920;
+  padding: 1.8rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.form-container:hover, .resumo-container:hover {
+  transform: scale(1.02);
+}
+
+/* Inputs e selects */
+input, select {
+  width: 100%;
+  max-width: 360px;
+  padding: 12px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: 1px solid #888;
+  background-color: #f0f0f0;
+  color: #000;
+  font-family: 'Magistral-Bold', sans-serif;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border: 2px solid #FFD700;
+  box-shadow: 0 0 8px #FFD70077;
+}
+
+/* Botões */
+button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  background-color: #FFD700;
+  color: #1b2e1f;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: #e6c200;
+  transform: scale(1.05);
+}
+
+button .icon {
+  margin-right: 8px;
+  transition: transform 0.3s;
+}
+
+button:hover .icon {
+  transform: rotate(15deg);
+}
+
+/* Botões de remover */
+button.remove {
+  background-color: #e53935;
+  color: white;
+  margin-left: 10px;
+}
+
+button.remove:hover {
+  background-color: #c62828;
+  transform: scale(1.05);
+}
+
+/* Listas de itens */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  text-align: left;
+}
+
+ul li {
+  background-color: #3a3f47;
+  border: 1px solid #555;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+ul li:hover {
+  background-color: #49505a;
+}
+
+/* Seção de férias */
+.secao-ferias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.secao-ferias .react-datepicker-wrapper {
+  margin: 10px;
+}
+
+/* Resumo */
+.resumo-container p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  animation: fadeIn 1s ease;
+}
+
+/* Footer fixo */
+footer {
+  background: linear-gradient(to right, #1b2e1f, #2e7d32);
+  color: white;
+  padding: 12px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.9rem;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .criar-container {
+    padding: 1.2rem;
+  }
+
+  .form-container, .resumo-container {
+    padding: 1rem;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 0.6rem;
+  }
+
+  ul li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  button.remove {
+    margin-top: 6px;
+    margin-left: 0;
+  }
+}
