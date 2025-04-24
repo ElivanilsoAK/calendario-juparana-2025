@@ -66,7 +66,21 @@ body {
   100% { transform: translateY(0); }
 }
 
-/* Container principal */
+/* Footer fixo */
+footer {
+  background: linear-gradient(to right, #1b2e1f, #2e7d32);
+  color: white;
+  padding: 12px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.9rem;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* --- Módulo de Estilo: Criar Calendário --- */
+
 .criar-container {
   background-color: rgba(0, 29, 10, 0.9);
   padding: 2rem;
@@ -76,7 +90,6 @@ body {
   animation: fadeIn 1.5s ease;
 }
 
-/* Containers de conteúdo */
 .form-container, .resumo-container {
   background-color: #006920;
   padding: 1.8rem;
@@ -84,13 +97,15 @@ body {
   margin-bottom: 2rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .form-container:hover, .resumo-container:hover {
   transform: scale(1.02);
 }
 
-/* Inputs e selects */
 input, select {
   width: 100%;
   max-width: 360px;
@@ -112,7 +127,6 @@ input:focus, select:focus {
   box-shadow: 0 0 8px #FFD70077;
 }
 
-/* Botões */
 button {
   padding: 12px 24px;
   border: none;
@@ -143,7 +157,6 @@ button:hover .icon {
   transform: rotate(15deg);
 }
 
-/* Botões de remover */
 button.remove {
   background-color: #e53935;
   color: white;
@@ -155,7 +168,6 @@ button.remove:hover {
   transform: scale(1.05);
 }
 
-/* Listas de itens */
 ul {
   list-style: none;
   padding: 0;
@@ -179,7 +191,6 @@ ul li:hover {
   background-color: #49505a;
 }
 
-/* Seção de férias */
 .secao-ferias {
   display: flex;
   flex-direction: column;
@@ -191,27 +202,12 @@ ul li:hover {
   margin: 10px;
 }
 
-/* Resumo */
 .resumo-container p {
   margin: 10px 0;
   font-size: 1.1rem;
   animation: fadeIn 1s ease;
 }
 
-/* Footer fixo */
-footer {
-  background: linear-gradient(to right, #1b2e1f, #2e7d32);
-  color: white;
-  padding: 12px;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  font-size: 0.9rem;
-  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.25);
-}
-
-/* Responsividade */
 @media (max-width: 768px) {
   .criar-container {
     padding: 1.2rem;

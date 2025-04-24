@@ -229,7 +229,7 @@ function Criar() {
     setEscala(novaEscala);
   };
   return (
-    <div className="criar-container" style={{ backgroundColor: '#0d3b1f', color: '#fff', fontFamily: 'Magistral-Bold, sans-serif' }}>
+    <div className="criar-container">
       <Header />
       <div className="grid gap-4 md:grid-cols-2">
         <FormFeriados
@@ -257,7 +257,7 @@ function Criar() {
         feriasPlantonistas={feriasPlantonistas}
         escala={escala}
       />
-      <div className="form-container text-center">
+      <div className="form-container">
         <button className="px-4 py-2 mt-4 text-white bg-green-700 rounded hover:bg-green-800" onClick={gerarRelatorio}>Gerar Relatório</button>
       </div>
     </div>
